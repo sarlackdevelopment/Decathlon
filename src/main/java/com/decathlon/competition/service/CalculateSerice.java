@@ -1,6 +1,7 @@
 package com.decathlon.competition.service;
 
 import com.decathlon.competition.domain.Competitor;
+import com.decathlon.competition.domain.Disciplines;
 import com.decathlon.competition.domain.Results;
 import com.decathlon.competition.repos.ResultsRepo;
 import java.util.List;
@@ -14,9 +15,12 @@ public class CalculateSerice {
   @Autowired
   ResultsRepo resultsRepo;
 
-  public int calculate() {
-    Map<Competitor, List<Results>> res = resultsRepo.getResults();
-    return 1;
+  public Map<Competitor, List<Results>> resultsMap() {
+    return resultsRepo.getResults();
+  }
+
+  public List<Disciplines> disciplinesList() {
+    return resultsRepo.getDisciplines();
   }
 
 }

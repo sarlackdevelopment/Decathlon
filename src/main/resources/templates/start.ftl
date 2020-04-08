@@ -18,15 +18,38 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
+
     </ul>
   </div>
 </nav>
 
 <div class="container mt-5">
-  <h1>Привет!</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Discipline / Competitor</th>
+        <#list results as key, value>
+          <th scope="col">${key.name}</th>
+        </#list>
+      </tr>
+    </thead>
+    <tbody>
+      <#list disciplines as discipline>
+        <tr>
+          <td>${discipline}</td>
+          <#list results as key, value>
+            <#list value as result>
+              <#if result.name.equals(discipline)>
+                <td>${result.result}</td>
+              </#if>
+            </#list>
+          </#list>
+        </tr>
+      </#list>
+    </tbody>
+  </table>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
