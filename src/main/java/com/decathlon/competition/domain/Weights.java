@@ -1,20 +1,28 @@
 package com.decathlon.competition.domain;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
 @Data
+@Builder
 public class Weights {
 
   // ( from the proposed article's table https://en.wikipedia.org/wiki/Decathlon, according to formula  y = a * |x - b|^c )
 
   @NonNull
-  private Double weightA;
+  private long id;
 
   @NonNull
-  private Double weightB;
+  private Disciplines discipline;
 
   @NonNull
-  private Double weightC;
+  private double weightA;
+
+  @NonNull
+  private double weightB;
+
+  @NonNull
+  private double weightC;
 
 }

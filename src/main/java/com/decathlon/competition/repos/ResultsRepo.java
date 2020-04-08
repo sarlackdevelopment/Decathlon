@@ -3,6 +3,7 @@ package com.decathlon.competition.repos;
 import com.decathlon.competition.domain.Competitor;
 import com.decathlon.competition.domain.Disciplines;
 import com.decathlon.competition.domain.Results;
+import com.decathlon.competition.domain.Weights;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -85,4 +86,22 @@ public class ResultsRepo {
 
     }};
   }
+
+  public static List<Weights> getWeights() {
+
+    return Arrays.asList(
+        Weights.builder().id(1).discipline(Disciplines.m100).weightA(25.4348).weightB(18).weightC(1.81).build(),
+        Weights.builder().id(1).discipline(Disciplines.longJump).weightA(90.5674).weightB(2.2).weightC(1.4).build(),
+        Weights.builder().id(1).discipline(Disciplines.shotPut).weightA(51.39).weightB(1.5).weightC(1.05).build(),
+        Weights.builder().id(1).discipline(Disciplines.highJump).weightA(585.64).weightB(0.75).weightC(1.42).build(),
+        Weights.builder().id(1).discipline(Disciplines.m400).weightA(1.53775).weightB(82).weightC(1.81).build(),
+        Weights.builder().id(1).discipline(Disciplines.hurdlesM110).weightA(5.74354).weightB(28.5).weightC(1.92).build(),
+        Weights.builder().id(1).discipline(Disciplines.DiscusThrow).weightA(12.91).weightB(4).weightC(1.1).build(),
+        Weights.builder().id(1).discipline(Disciplines.PoleVault).weightA(140.182).weightB(1).weightC(1.35).build(),
+        Weights.builder().id(1).discipline(Disciplines.JavelinThrow).weightA(10.14).weightB(7).weightC(1.08).build(),
+        Weights.builder().id(1).discipline(Disciplines.m1500).weightA(0.03768).weightB(480).weightC(1.85).build()
+    );
+
+  }
+
 }

@@ -1,7 +1,6 @@
 package com.decathlon.competition.controller;
 
 import com.decathlon.competition.service.CalculateSerice;
-import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +14,21 @@ public class MainController {
 
   @GetMapping("/")
   public String startPage(Model model) {
+    return "main";
+  }
+
+  @GetMapping("/results")
+  public String resultsPage(Model model) {
     model.addAttribute("results", calculateSerice.resultsMap());
     model.addAttribute("disciplines", calculateSerice.disciplinesList());
-    return "start";
+    return "results";
+  }
+
+  @GetMapping("/weights")
+  public String weightsPage(Model model) {
+    model.addAttribute("weights", calculateSerice.weights());
+    model.addAttribute("disciplines", calculateSerice.disciplinesList());
+    return "weights";
   }
 
 }

@@ -15,6 +15,6 @@ public class Results {
   @NonNull
   private Disciplines name;
   @NonNull
-  private Double result;
+  private double result;
 
 }
