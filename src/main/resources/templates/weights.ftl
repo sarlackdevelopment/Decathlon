@@ -1,6 +1,7 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
+<h4 class="text-center">Coefficents (weights) of disciplines</h4>
 <table class="table">
   <thead>
     <tr>

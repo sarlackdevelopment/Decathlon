@@ -1,5 +1,5 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-<h1>It is the Decathlon application. Join us!</h1>
+<h4 class="text-center">It is the Decathlon application. Join us!</h4>
 </@c.page>

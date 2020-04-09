@@ -11,9 +11,6 @@ public class Weights {
   // ( from the proposed article's table https://en.wikipedia.org/wiki/Decathlon, according to formula  y = a * |x - b|^c )
 
   @NonNull
-  private long id;
-
-  @NonNull
   private Disciplines discipline;
 
   @NonNull

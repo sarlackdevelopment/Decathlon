@@ -7,10 +7,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/results">results <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/results">results</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/weights">weight <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/weights">weights</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/calculate">calculate</a>
       </li>
     </ul>
   </div>

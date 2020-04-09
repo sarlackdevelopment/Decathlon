@@ -1,6 +1,7 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
+  <h4 class="text-center">Results of competitions</h4>
   <table class="table">
     <thead>
       <tr>
