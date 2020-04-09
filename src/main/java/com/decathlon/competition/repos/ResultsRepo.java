@@ -18,7 +18,7 @@ public class ResultsRepo {
   }
 
   public static Map<Competitor, List<Results>> getResults() {
-    return new HashMap<>() {{
+    return new HashMap<Competitor, List<Results>>() {{
 
       put(
           Competitor.builder().id(1).name("John Smith").build(),
