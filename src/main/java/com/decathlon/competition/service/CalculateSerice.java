@@ -32,11 +32,10 @@ public class CalculateSerice {
 
   public List<Weights> weights() { return resultsRepo.getWeights(); }
 
-  public List<String> calculatePlaces() {
+  public List<String>  calculatePlaces(Map<Competitor, List<Results>> results) {
 
     Map<Competitor, Double> places = new HashMap<>();
 
-    Map<Competitor, List<Results>> results = resultsMap();
     List<Weights> weights = weights();
 
     for(Competitor competitor: results.keySet()) {
@@ -59,7 +58,7 @@ public class CalculateSerice {
 
   }
 
-  private static <K, V extends Comparable<? super V>> Map<K, V> sortByValue( Map<K, V> map ) {
+  public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue( Map<K, V> map ) {
     Map<K,V> result = new LinkedHashMap<>();
     Stream <Entry<K,V>> st = map.entrySet().stream();
 

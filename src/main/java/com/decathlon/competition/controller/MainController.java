@@ -40,7 +40,7 @@ public class MainController {
 
   @PostMapping("/calculate")
   public String calculate(Model model) {
-    List<String> places = calculateSerice.calculatePlaces();
+    List<String> places = calculateSerice.calculatePlaces(calculateSerice.resultsMap());
     model.addAttribute("firstPlace", places.get(2));
     model.addAttribute("secondPlace", places.get(1));
     model.addAttribute("thridPlace", places.get(0));
