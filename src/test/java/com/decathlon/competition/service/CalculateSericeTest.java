@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.decathlon.competition.domain.Competitor;
 import com.decathlon.competition.domain.Disciplines;
 import com.decathlon.competition.domain.Results;
-import java.lang.reflect.Array;
-import java.rmi.server.UnicastRemoteObject;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
